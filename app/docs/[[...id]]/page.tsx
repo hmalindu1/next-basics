@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Docs = () => {
+const Docs = ({ params }) => {
+  console.log(params);
+  
   return (
     <div>Docs</div>
   )
