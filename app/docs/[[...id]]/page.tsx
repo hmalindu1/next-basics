@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import styles from './style.module.css';
 
 const Docs = ({ params }) => {
   console.log(params);
-  
+
   return (
-    <div>Docs</div>
+    <div className={styles.title}>Docs</div>
   )
 }
 
