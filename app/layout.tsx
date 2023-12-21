@@ -12,7 +12,7 @@ export const metadata = {
 const links = [
   { href: '/', label: 'Home' },
   { href: '/docs', label: 'Docs' },
-  { href: '/todos', label: 'Todos' }
+  { href: '/todos', label: 'Todos' },
 ]
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header>
           <nav>
-            <ul className='flex items-center'>
+            <ul className="flex items-center">
               {links.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>{link.label}</Link>
@@ -34,8 +34,8 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
-        <div>{children}
-        </div></body>
+        <div>{children}</div>
+      </body>
     </html>
   )
 }
