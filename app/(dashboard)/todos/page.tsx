@@ -1,7 +1,7 @@
 import TodoList from '@/components/TodoList'
 import db from '@/utils/db'
 const getData = async () => {
-  await new Promise((resolve, reject) => setTimeout(() => reject(), 2000))
+  await new Promise((resolve, reject) => setTimeout(() => resolve(), 2000))
   const todos = await db.todo.findMany({})
   console.log(todos)
   return todos

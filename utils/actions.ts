@@ -1,5 +1,6 @@
 'use server'
 import db from '@/utils/db'
+import { revalidatePath } from 'next/cache'
 
 export const newTodo = async (formData) => {
   const todo = await db.todo.create({
@@ -7,4 +8,6 @@ export const newTodo = async (formData) => {
       content: formData.get('content'),
     },
   })
+
+  revalidatePath('/todos')
 }
